@@ -81,6 +81,7 @@ app.get('/api/potencia', (req, res) =>{
     // Devolver el resultado como JSON
     res.json({ resultado: potencia });
 });
-
+/*
 const port = process.env.port || 80;
 app.listen(port, () => console.log(`escuchando en puerto ${port}`));
+*/
