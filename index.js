@@ -66,7 +66,8 @@ app.get('/api/division', (req, res) =>{
     
     const div = num1 / num2;
     if(div = null){
-        res.json({resultado: "No se puede dividir por cero"});
+        const cero = "No se puede dividir por cero"
+        res.json({resultado: cero});
     }
     // Devolver el resultado como JSON
     res.json({ resultado: div });
