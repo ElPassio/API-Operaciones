@@ -63,12 +63,11 @@ app.get('/api/division', (req, res) =>{
     if (isNaN(num1) || isNaN(num2)) {
         return res.status(400).json({ error: 'Los parámetros deben ser números' });
     }
-    
-    const div = num1 / num2;
-    if(div = null){
-        const cero = "No se puede dividir por cero"
-        res.json({resultado: cero});
+    if(num2 === 0){
+        return res.status(400).json({ error: 'No se puede dividir por cero' });
     }
+    const div = num1 / num2;
+    
     // Devolver el resultado como JSON
     res.json({ resultado: div });
 });
